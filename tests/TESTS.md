@@ -12,7 +12,6 @@ tests/
 ├── module/ # A: Module-level black-box tests
 ├── unit/ # B: Individual function/method tests
 ├── integration/ # C: Inter-module interaction tests
-├── snapshot/ # D: Long-term regression fingerprinting
 ├── edge_cases/ # E: Boundary conditions and defensive assertions
 └── conftest.py # Shared fixtures for test isolation and mocking
 
@@ -26,8 +25,7 @@ tests/
 |---------------|--------------------------------------------------|-----------------------------------------|
 | Module        | `test_module_<module_name>.py`                   | `test_module_time.py`                   |
 | Unit          | `test_<module>_<function_or_behavior>.py`        | `test_time_advance.py`                  |
-| Integration   | `test_<modA>_<funcA>_to_<modB>_<funcB>.py`       | `test_time_to_api_query_consistency.py`|
-| Snapshot      | `test_snapshot_<scenario>.py`                    | `test_snapshot_calendar_baseline.py`    |
+| Integration   | `test_<modA>_<funcA>_to_<modB>_<funcB>.py`       | `test_time_to_api_query_consistency.py` |
 | Edge Case     | `test_<module>_<edge_case_description>.py`       | `test_unified_time_module_invalid.py`   |
 
 ---
@@ -48,11 +46,7 @@ def test_time_advance(): ...
 @pytest.mark.integration
 def test_time_to_api_query_consistency(): ...
 
-# Snapshot test (D)
-@pytest.mark.snapshot
-def test_snapshot_time_fingerprint(snapshot): ...
-
-# Edge case (E)
+# Edge case (D)
 @pytest.mark.edge
 def test_manager_on_null_path(): ...
 
@@ -78,11 +72,7 @@ To run by category:
 pytest -m unit
 pytest -m module
 pytest -m integration
-pytest -m snapshot
 pytest -m edge
-
-To update snapshots:
-pytest --snapshot-update
 
 📈 Coverage & CI
 Use pytest-cov to enforce thresholds:
@@ -94,7 +84,6 @@ pytest --cov=time_engine --cov-report=term-missing
 Rule  	                                                     Description
 ❗ Each new module must have module + unit tests	             Add both A and B tests with meaningful naming
 🔗 Any module interaction must be covered in C tests	     E.g. unified time pushing into API, parameters into calendars
-🧪Snapshot for any serialized output	                     .npy calendar tables, brightness curves, etc
 ⚠️ Edge case for every user-modifiable input or config	     Nulls, invalid values, overflow risk, corrupted files, etc
 ✅ Use caplog, monkeypatch, and temp paths for robustness    Avoid file locks or dirty state
 

@@ -2,8 +2,8 @@ from setuptools import find_packages, setup
 
 # Always bump the version here for new releases
 setup(
-    name="format_time",
-    version="1.0.0",
+    name="format_time_engine",
+    version="1.0.1",
     description=(
         "A modular time and calendar engine with customizable ticks, "
         "sun/moon altitude tables, and dynamic parameter propagation."

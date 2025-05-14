@@ -1,7 +1,4 @@
-<!-- Banner -->
-<p align="center">
-  <img src="assets/format_time.svg" alt="format_time Logo" width="300"/>
-</p>
+![format_time Logo](https://raw.githubusercontent.com/Simon/format_time/main/assets/format_time.svg)
 
 [![YouTube Subscribe](https://img.shields.io/badge/YouTube–Subscribe-red?style=social&logo=youtube)](https://youtube.com/format_life)
 
@@ -9,7 +6,9 @@
 
 ---
 
-## <img src="assets/caution_platform.svg" width="64" alt="Problem"/>  The Problem
+## ⚠️ The Problem
+
+![Problem Icon](https://raw.githubusercontent.com/Simon/format_time/main/assets/caution_platform.svg)
 
 Projects that simulate a world—whether it’s a game, a physics engine, a climate model, or an automation pipeline—inevitably need:
 
@@ -22,7 +21,9 @@ Projects that simulate a world—whether it’s a game, a physics engine, a clim
 
 ---
 
-## <img src="assets/lightbulb_platform.svg" width="64" alt="Solution"/>  My Solution: format_time
+## 💡 The Solution: format_time
+
+![Solution Icon](https://raw.githubusercontent.com/Simon/format_time/main/assets/lightbulb_platform.svg)
 
 **format_time** turns “build-an-engine-from-scratch” into “install-and-go.” It provides:
 
@@ -39,7 +40,7 @@ Projects that simulate a world—whether it’s a game, a physics engine, a clim
   - Change any parameter at runtime—everything updates instantly  
 
 - 🔔 **Event Notifications**  
-  - UDP-broadcast each time change  
+  - UDP-broadcast on every tick advance  
   - Easy listeners for UIs, game loops, analytics pipelines  
 
 - ✅ **Production-Quality**  
@@ -49,99 +50,90 @@ Projects that simulate a world—whether it’s a game, a physics engine, a clim
 
 ---
 
-## <img src="assets/box_platform.svg" width="64" alt="Installation"/>  Installation
+## 📦 Installation
 
-__bash__  
-- **Core engine only**  
-  pip install format_time
+![Installation Icon](https://raw.githubusercontent.com/Simon/format_time/main/assets/box_platform.svg)
 
-- **GIS / astronomy extras** (sun & moon tables)  
-  pip install format_time[geo]
+```bash
+# Core engine only
+pip install format_time_engine
 
-- **Qt & matplotlib for custom UIs**  
-  pip install format_time[ui]
+# GIS / astronomy extras (sun & moon tables)
+pip install format_time_engine[geo]
 
-- **Everything**  
-  pip install format_time[geo,ui]
+# Qt & matplotlib for custom UIs
+pip install format_time_engine[ui]
+
+# Everything
+pip install format_time_engine[geo,ui]
+```
 
 ---
 
-## 🎬 Quickstart
+## 🎬 Quickstart ![Quickstart Icon](https://raw.githubusercontent.com/Simon/format_time/main/assets/quickstart_platform.svg)
 
-__python__  
-1. **Initialize the engine**
-   First, import and instantiate the unified module—this both sets up your clock and creates a local data        directory for the sun/moon tables.
-   ```python 
-   from time_engine.unified_time_module import UnifiedTimeModule  
-   utm = UnifiedTimeModule(data_dir="calendar_data")`  
-2. **Advance Time**
-   Progress your simulation by “ticks.” Each tick is one unit of time; how many ticks make an hour is fully    configurable. Here, we jump ahead by 3,600 ticks:
-   ```python
-   utm.time.advance(3600)  
-3. **Read the current datetime**
-   Retrieve a human-readable breakdown of your simulation’s current time—year, month, day, hour, and tick:
-   ```python
-   dt = utm.time.current_datetime()
-   print(
-       `f"{dt['year']}-{dt['month']:02}-{dt['day']:02} 
-   f"{dt['hour']:02}:{dt['tick']}/{utm.time.ticks_per_hour} ticks
-   )  
+```python
+from time_engine.unified_time_module import UnifiedTimeModule
+utm = UnifiedTimeModule(data_dir="calendar_data")
 
-4. **Query celestial data**
-   Grab the sun’s altitude (or similarly the moon’s) based on your current date/time without any external API          calls:
-   ```python
-   sun_alt = utm.sun_api().get_altitude()
-   print(f"Sun altitude: {sun_alt:.1f}°")  
+# Advance by 3,600 ticks
+utm.time.advance(3600)
 
-5. **Listen for time-change events**
-   If you need real-time updates in another process or UI, subscribe to UDP broadcasts emitted on each tick          advance. For example:
-   ```python
-   import socket
-   sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-   sock.bind(("0.0.0.0", 9999))
-   data, _ = sock.recvfrom(1024)
-   print("Time update:", data)
+# Read current datetime
+dt = utm.time.current_datetime()
+print(
+  f"{dt['year']}-{dt['month']:02}-{dt['day']:02} "
+  f"{dt['hour']:02}:{dt['tick']}/{utm.time.ticks_per_hour} ticks"
+)
+
+# Query sun altitude
+sun_alt = utm.sun_api().get_altitude()
+print(f"Sun altitude: {sun_alt:.1f}°")
+```
 
 ---
 
 ## 🔧 Configuration
 
-`All core parameters live in a SQLite DB (default parameters.db). Change them on the fly:`
-    
-    
-   from parameters.manager import ParametersManager  
-   pm = ParametersManager()  
-   pm.set("time", "hours_per_day", "30")  
+![Configuration Icon](https://raw.githubusercontent.com/Simon/format_time/main/assets/configuration_platform.svg)
 
-   (calendars and notifications rebuild automatically)
+All core parameters live in a SQLite database (`parameters.db`). Change them on the fly:
 
----
+```python
+from parameters.manager import ParametersManager
 
-Override the DB path
+pm = ParametersManager()
+pm.set("time", "hours_per_day", "30")
+# calendars and notifications rebuild automatically
+```
 
-   export PARAM_DB_PATH=/path/to/my_params.db
+Override the DB path:
 
----
-
-## <img src="assets/collab_platform.svg" width="64" alt="Contributing"/>  Contributing
-
-  
-  **Fork & clone**  
-  git clone git@github.com:YOUR_USERNAME/format_time.git  
-  cd format_time
-
-  **Install dev tools**  
-  pip install -e .[dev]  
-  pre-commit install  
-  pre-commit run --all-files  
-  pytest`
+```bash
+export PARAM_DB_PATH=/path/to/my_params.db
+```
 
 ---
 
-## 📄 License
+## 🤝 Contributing
 
-This project is MIT-licensed. See [LICENSE](LICENSE) for details.
+![Contributing Icon](https://raw.githubusercontent.com/Simon/format_time/main/assets/collab_platform.svg)
+
+1. **Fork & clone**
+   ```bash
+   git clone git@github.com:Simon/format_time.git
+   cd format_time
+   ```
+2. **Install dev tools**
+   ```bash
+   pip install -e .[dev]
+   pre-commit install
+   pre-commit run --all-files
+   pytest
+   ```
 
 ---
 
-Build your world. Leave the clockwork to us.
+## 📄 License ![License Icon](https://raw.githubusercontent.com/Simon/format_time/main/assets/license_platform.svg)
+
+This project is MIT-licensed. See [LICENSE](LICENSE) for details.  
