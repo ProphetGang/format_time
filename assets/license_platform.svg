@@ -11,9 +11,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg137"
-   width="1277.3333"
-   height="809.33331"
-   viewBox="0 0 1277.3333 809.33331"
+   width="319"
+   height="202"
+   viewBox="0 0 319.00001 202"
    sodipodi:docname="license_platform.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
@@ -44,15 +44,19 @@
      id="namedview139"
      showgrid="false"
      inkscape:zoom="0.44467644"
-     inkscape:cx="654.67126"
-     inkscape:cy="582.383"
+     inkscape:cx="173.28265"
+     inkscape:cy="276.51126"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg137" />
+     inkscape:current-layer="svg137"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <g
      id="g147"
-     transform="translate(2.2488165,-2.2488261)">
+     transform="matrix(0.24972855,0,0,0.24956117,0.01341317,0)">
     <path
        style="fill:#fefefe;stroke-width:1.33333325"
        d="M 0,404.66665 V 0 H 638.66665 1277.3333 V 404.66665 809.33331 H 638.66665 0 Z"
