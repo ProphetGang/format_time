@@ -121,7 +121,7 @@ export PARAM_DB_PATH=/path/to/my_params.db
 
 1. **Fork & clone**
    ```bash
-   git clone git@github.com:Simon/format_time.git
+   git clone git@github.com:ProphetGang/format_time.git
    cd format_time
    ```
 2. **Install dev tools**
@@ -134,6 +134,8 @@ export PARAM_DB_PATH=/path/to/my_params.db
 
 ---
 
-## 📄 License ![License Icon](https://raw.githubusercontent.com/ProphetGang/format_time/main/assets/license_platform.svg)
+## 📄 License 
+
+![License Icon](https://raw.githubusercontent.com/ProphetGang/format_time/main/assets/license_platform.svg)
 
 This project is MIT-licensed. See [LICENSE](LICENSE) for details.  
