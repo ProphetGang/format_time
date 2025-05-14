@@ -1,0 +1,60 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# pytest, coverage, mypy
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Environment variable files
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Local settings
+*.local
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# SQLite databases (ParametersManager)
+*.db
+
+# Generated calendar data
+*.npy
+
+# Any temp or test-dump directories
+calendar_test_dir/
+
+# Scratch / stray files
+alt
+float
+return
+self.time.days_per_year

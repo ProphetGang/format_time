@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+      - run: pip install black isort flake8
+      - run: black --check .
+      - run: isort --check-only .
+      - run: flake8 .
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+      - run: pip install -r requirements.txt
+      - run: pytest --maxfail=1 --disable-warnings --ignore=gui

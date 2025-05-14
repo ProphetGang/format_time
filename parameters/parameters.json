@@ -1,0 +1,8 @@
+{
+  "phase0": {
+    "test_param": 123
+  },
+  "time": {
+    "hours_per_day": 48
+  }
+}
