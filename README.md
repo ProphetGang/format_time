@@ -6,9 +6,14 @@
 
 ---
 
-##  The Problem
-
-![Problem Icon](https://github.com/ProphetGang/format_time/raw/main/assets/caution_platform.svg)
+##  Problem&nbsp;
+<img
+  src="https://github.com/ProphetGang/format_time/raw/main/assets/caution_platform.svg"
+  alt="Problem Icon"
+  width="64"
+  height="64"
+  style="vertical-align:middle"
+/>
 
 Projects that simulate a world—whether it’s a game, a physics engine, a climate model, or an automation pipeline—inevitably need:
 
@@ -21,9 +26,14 @@ Projects that simulate a world—whether it’s a game, a physics engine, a clim
 
 ---
 
-##  The Solution: format_time
-
-![Solution Icon](https://github.com/ProphetGang/format_time/raw/main/assets/lightbulb_platform.svg)
+##  Solution&nbsp;
+<img
+  src="https://https://github.com/ProphetGang/format_time/raw/main/assets/lightbulb_platform.svg"
+  alt="Solution Icon"
+  width="64"
+  height="64"
+  style="vertical-align:middle"
+/>
 
 **format_time** turns “build-an-engine-from-scratch” into “install-and-go.” It provides:
 
@@ -50,9 +60,14 @@ Projects that simulate a world—whether it’s a game, a physics engine, a clim
 
 ---
 
-##  Installation
-
-![Installation Icon](https://github.com/ProphetGang/format_time/raw/main/assets/box_platform.svg)
+##  Installation&nbsp;
+<img
+  src="https://github.com/ProphetGang/format_time/raw/main/assets/box_platform.svg"
+  alt="Installation Icon"
+  width="64"
+  height="64"
+  style="vertical-align:middle"
+/>
 
 ```bash
 # Core engine only
@@ -70,7 +85,14 @@ pip install format_time_engine[geo,ui]
 
 ---
 
-##  Quickstart ![Quickstart Icon](https://github.com/ProphetGang/format_time/raw/main/assets/quickstart_platform.svg)
+##  Quickstart&nbsp;
+<img
+  src="https://github.com/ProphetGang/format_time/raw/main/assets/quickstart_platform.svg"
+  alt="Quickstart Icon"
+  width="64"
+  height="64"
+  style="vertical-align:middle"
+/>
 
 ```python
 from time_engine.unified_time_module import UnifiedTimeModule
@@ -93,9 +115,14 @@ print(f"Sun altitude: {sun_alt:.1f}°")
 
 ---
 
-##  Configuration
-
-![Configuration Icon](https://github.com/ProphetGang/format_time/raw/main/assets/configuration_platform.svg)
+##  Configuration&nbsp;
+<img
+  src="https://github.com/ProphetGang/format_time/raw/main/assets/configuration_platform.svg"
+  alt="Configuration Icon"
+  width="64"
+  height="64"
+  style="vertical-align:middle"
+/>
 
 All core parameters live in a SQLite database (`parameters.db`). Change them on the fly:
 
@@ -115,9 +142,14 @@ export PARAM_DB_PATH=/path/to/my_params.db
 
 ---
 
-##  Contributing
-
-![Contributing Icon](https://github.com/ProphetGang/format_time/raw/main/assets/collab_platform.svg)
+##  Contributing&nbsp;
+<img
+  src="https://github.com/ProphetGang/format_time/raw/main/assets/collab_platform.svg"
+  alt="Contributing Icon"
+  width="64"
+  height="64"
+  style="vertical-align:middle"
+/>
 
 1. **Fork & clone**
    ```bash
@@ -134,8 +166,13 @@ export PARAM_DB_PATH=/path/to/my_params.db
 
 ---
 
-##  License 
-
-![License Icon](https://github.com/ProphetGang/format_time/raw/main/assets/license_platform.svg)
+##  License&nbsp;
+<img
+  src="https://github.com/ProphetGang/format_time/raw/main/assets/license_platform.svg"
+  alt="License Icon"
+  width="64"
+  height="64"
+  style="vertical-align:middle"
+/>
 
 This project is MIT-licensed. See [LICENSE](LICENSE) for details.  
