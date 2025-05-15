@@ -44,6 +44,11 @@ Thumbs.db
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
+# Docs build output
+docs/_build/
+site/
+docs/.myst-cache/
+
 # SQLite databases (ParametersManager)
 *.db
 
