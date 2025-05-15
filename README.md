@@ -28,7 +28,7 @@ Projects that simulate a world—whether it’s a game, a physics engine, a clim
 
 ##  Solution&nbsp;
 <img
-  src="https://https://github.com/ProphetGang/format_time/raw/main/assets/lightbulb_platform.svg"
+  src="https://github.com/ProphetGang/format_time/raw/main/assets/lightbulb_platform.svg"
   alt="Solution Icon"
   width="64"
   height="64"
